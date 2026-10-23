@@ -1,21 +1,19 @@
 # Alpha–Gamma Coincidence Experiment
 
-This repository contains analysis code and supporting material for an undergraduate nuclear-physics experiment on the range of alpha particles in air and alpha–gamma coincidence measurements in the decay of \(^{241}\mathrm{Am}\) to \(^{237}\mathrm{Np}\).
-
-**Repository:** https://github.com/crimsonpane23/Alpha-Gamma-Coincidence-Experiment
+This repository contains analysis code, plots and reports for the experiment on the range of alpha particles in air and alpha–gamma coincidence measurements in the decay of Am-241 to Np-237. This experiment was performed in the P445 - Integrated Physics Laboratory-I. 
 
 ## Experiment overview
 
-The work has two parts:
+The Experiment has two parts:
 
-1. **Range of alpha particles:** The residual energy of alpha particles from an \(^{241}\mathrm{Am}\) source was measured at different air pressures while keeping the source–detector separation fixed. The effective path length was calculated for standard atmospheric conditions, and the range was estimated by extrapolating the residual-energy curve.
-2. **Alpha–gamma coincidence:** Alpha particles were detected using a silicon surface-barrier detector and gamma rays using a 2-inch × 2-inch NaI(Tl) scintillation detector. Coincidence events were selected using pulse-height calibration and alpha–gamma energy correlations. Several timing definitions were compared, with pulse-height-dependent time-walk correction applied before lifetime fitting.
+1. **Range of alpha particles:** The residual energy of alpha particles from an Am-241 source was measured at different air pressures while keeping the source–detector separation fixed. The effective path length was calculated for standard atmospheric conditions, and the range was estimated by extrapolating the residual-energy curve.
+2. **Alpha–gamma coincidence:** Alpha particles were detected using a silicon surface-barrier detector and gamma rays using a 2-inch × 2-inch NaI(Tl) scintillation detector. Coincidence events were selected using pulse-height calibration and alpha–gamma energy correlations. Several timing definitions were compared, with pulse-height-dependent time-walk correction applied before fitting the time delay distribution to obtain lifetime of Np-237 excited state.
 
 ## Main results
 
-- **Extrapolated alpha-particle range in air at STP:** \((2.61 \pm 0.01)\,\mathrm{cm}\).
+- **Extrapolated alpha-particle range in air at STP:** \((2.61 \pm 0.01)\,\mathrm{cm}\.
 - **Coincidence data:** 4,963 events recorded over 96 hours.
-- **Reference transition:** the 59.5 keV excited state of \(^{237}\mathrm{Np}\), with a reference half-life of approximately 67.2 ns.
+- **Targeted transition:** the 59.5 keV excited state of Np-237, with a reference half-life of approximately 67.2 ns.
 - **Extracted half-lives:** \((63 \pm 2)\,\mathrm{ns}\) using trigger-crossing times and \((82 \pm 3)\,\mathrm{ns}\) using constant-fraction times. The trigger-time estimate is closer to the reference value. The difference between methods indicates that timing-related systematic effects remain relevant.
 
 These values are the results reported in the accompanying experimental report; uncertainties should be interpreted according to the analysis and fit procedures described there.
@@ -70,8 +68,8 @@ The exact file names and directory layout of raw data and generated outputs depe
 
 ## Experimental setup
 
-- **Alpha source:** \(^{241}\mathrm{Am}\).
-- **Alpha detector:** silicon surface-barrier detector.
+- **Alpha source:** Am-241.
+- **Alpha detector:** Silicon surface-barrier detector.
 - **Gamma detector:** 2-inch × 2-inch NaI(Tl) scintillation detector (SD152F).
 - **Gamma-detector high voltage:** 600 V.
 - **Waveform acquisition:** Teledyne LeCroy WaveSurfer oscilloscope; the final configuration used 40 kS, 2 GS/s, and a 20 µs acquisition window.
@@ -82,7 +80,6 @@ These are the settings documented in the report and may need to be changed for o
 ## Dependencies
 
 - ROOT with the C++ interpreter and histogram/fit libraries used by the macros.
-- C++17-compatible compiler support for `std::filesystem` if compiling outside ROOT's interpreter/ACLiC workflow.
 - Raw oscilloscope CSV files and intermediate CSV files required by each analysis stage.
 
 ## Reports and references
@@ -95,4 +92,4 @@ M. Vretenar, N. Erceg, and M. Karuza, “Energy-resolved coincidence counting us
 
 ## Limitations
 
-The FPGA-based acquisition route was explored but not used for the final reported coincidence data; the oscilloscope was used instead. The extracted lifetime depends on the timing method, and residual timing-related systematic effects require further investigation. The README does not replace the detailed analysis choices and caveats documented in the report.
+The FPGA-based acquisition route was explored but not used for the final reported coincidence data; the oscilloscope was used instead. The extracted lifetime depends on the timing method, and residual timing-related systematic effects require further investigation. 
